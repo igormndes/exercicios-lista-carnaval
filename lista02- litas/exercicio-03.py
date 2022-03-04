@@ -7,25 +7,32 @@ Lista de exercícios
 Tema: Listas
 Diversão do carnaval \o/
 
-Exercício 7: 
-Dada a lista de strings [“1”, “7”, “99”, “15”] construa um programa que converte todos os elementos desta lista para inteiro.
+Exercício 3: 
+Crie uma lista com 6 números inteiros. Imprima o maior, o menor e suas respectivas posições. Exemplo: para a lista [5,4,6,8,3,4] a saída deve ser
+>>> O maior elemento é 8 e está na posição 3
+>>> O menor elemento é 3 e está na posição 4
 
-Faça também o inverso, dada a mesma lista só que agora de elementos inteiros, converta todos os elementos para int.
+Obs: caso o maior ou o menor número sejam repetidos, trazer a menor posição.
+
 
 """
 
-# Definindo a lista
-lista = ["1", "7", "99", "15"]
-print (f"\nLista original: {lista}\n")
+# Definindo lista 
+lista = [5, 4, 6, 8, 3, 4 ]
 
-# Convertendo os elementos para int
-for i,j in enumerate(lista):
-    lista[i] = int(j)
+# Encontrando maior elemento:
+maior_elemento = max(lista)
 
-print (f"\nLista como inteiro: {lista}\n")
+# Encontrando posição do maior elemento:
+pos_maior = lista.index(maior_elemento)
 
-# Convertendo de volta para string
-for i,j in enumerate(lista):
-    lista[i] = str(j)
+# Encontrando menor elemento:
+menor_elemento = min(lista)
 
-print (f"\nLista como string: {lista}\n")
+# Encontrando posição do menor elemento:
+pos_menor = lista.index(menor_elemento)
+
+# Imprimindo elemento e posição
+print (f"O maior elemento é {maior_elemento} e está na posição: {pos_maior}"
+       f"\nO menor elemento é {menor_elemento} e está na posição: {pos_menor}")
+
